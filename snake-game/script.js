@@ -239,7 +239,7 @@ function draw() {
 
 		if (isPrime(snake.score)) {
 			let status = true;
-			if (counter > 100) {
+			if (counter > 175) {
 				status = false;
 			}
 			else if (status && !(counter % 15 === 0)) {
@@ -322,7 +322,7 @@ function eat(snake, apples, lifes) {
 
 		if (isPrime(snake.score)) {
 			let status = true;
-			if (counter > 100) {
+			if (counter > 175) {
 				status = false;
 			} else if (status && !(counter % 15 == 0)) {
 				for (let j = 0; j < lifes.length; j++) {
