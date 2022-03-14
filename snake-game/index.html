@@ -1,48 +1,73 @@
 <html>
-    <head>
-			<style>
-				#snakeBoard {
-					border: 1px solid black;
-					display: block;
-					margin: 0 auto;
-				}
 
-				#score1Board {
-					border: 1px solid black;
-					display: block;
-					margin: -15px auto;
-				}
+<head>
+	<style>
+		body {
+			background-color: rgb(119, 255, 187);
+		}
 
-				#game-level {
-					text-align: center;
-					margin-top: 0;
-				}
+		#snakeBoard {
+			border: 5px solid rgb(2, 163, 83);
+			background-color: rgb(166, 255, 201);
+			display: block;
+			margin: 0 auto;
+		}
 
-				#score-heading {
-					text-align: center;
-					font-size: 14pt;
-					margin-top: -22px;
-				}
+		#logo {
+			display: flex;
+			margin-top: -11.5cm;
+			margin-left: 2cm;
+		}
 
-				#speed {
-					text-align: center;
-					font-size: 16pt;
-					margin-top: 20px;
-				}
+		#copyright {
+			display: flex;
+			margin-left: auto;
+			margin-right: 1.5cm;
+			margin-top: -6cm;
+		}
 
-			</style>
-			<script type="text/javascript" src="script.js"></script>
-    </head>
-    <body onload="draw();">
-        <img id="apple" style="display: none;" width="15" height="15" src="Assets/apple.png" alt="Apple">	
-        <img id="snake-head" style="display: none;" width="15" height="15" src="Assets/snake-head.png" alt="Snake head">
-        <img id="snake-body" style="display: none;" width="15" height="15" src="Assets/snake-body.png" alt="Snake head">
-        <img id="lifes" style="display: none;" width="15" height="15" src="Assets/life.png" alt="Snake life">
-        <img id="heart" style="display: none;" width="15" height="15" src="Assets/heart.png" alt="Heart">
-        <canvas id="snakeBoard" width="450" height="450"></canvas>
-        <h2 id="game-level"></h2>
-				<p id="score-heading">Score</p>
-        <canvas id="score1Board" width="40" height="40"></canvas>
-				<p id="speed"></p>
-    </body>
+		#score1Board {
+			border: 1px solid black;
+			display: block;
+			margin: -15px auto;
+			padding-right: 15px;
+
+		}
+
+		#game-level {
+			text-align: center;
+			margin-top: 0;
+		}
+
+		#score-heading {
+			text-align: center;
+			font-size: 14pt;
+			margin-top: -22px;
+		}
+
+		#speed {
+			text-align: center;
+			font-size: 16pt;
+			margin-top: 20px;
+		}
+	</style>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="draw();">
+	<img id="apple" style="display: none;" width="15" height="15" src="Assets/apple.png" alt="Apple">
+	<img id="snake-head" style="display: none;" width="15" height="15" src="Assets/snake-head.png" alt="Snake head">
+	<img id="snake-body" style="display: none;" width="15" height="15" src="Assets/snake-body.png" alt="Snake head">
+	<img id="lifes" style="display: none;" width="15" height="15" src="Assets/life.png" alt="Snake life">
+	<img id="heart" style="display: none;" width="15" height="15" src="Assets/heart.png" alt="Heart">
+	<img id="thorn" style="display: none;" width="15" height="15" src="Assets/thorn.png" alt="Heart">
+	<canvas id="snakeBoard" width="450" height="450"></canvas>
+	<h2 id="game-level"></h2>
+	<p id="score-heading">Score</p>
+	<canvas id="score1Board" width="40" height="40"></canvas>
+	<p id="speed"></p>
+	<img id="logo" src="Assets/logo.png" alt="" width="240" height="240">
+	<img id="copyright" src="Assets/copyright.png" alt="" width="240" height="240">
+</body>
+
 </html>
