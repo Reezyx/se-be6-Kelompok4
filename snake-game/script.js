@@ -514,16 +514,23 @@ function checkCollision(snakes) {
 		for (let j = 0; j < snakes.length; j++) {
 			for (let k = 1; k < snakes[j].body.length; k++) {
 				let thorns = thorn[0];
-				if (snakes[i].head.x == snakes[j].body[k].x && snakes[i].head.y == snakes[j].body[k].y || thorns.position.x == snakes[j].body[k].x && thorns.position.y == snakes[j].body[k].y) {
+				if (snakes[i].head.x == snakes[j].body[k].x && snakes[i].head.y == snakes[j].body[k].y) {
 					isCollide = true;
+				}
+				else if (snake.level == 1 || snake.level == 3) {
+					if (thorns.position.x == snakes[j].body[k].x && thorns.position.y == snakes[j].body[k].y) {
+						isCollide = true;
+					}
 				}
 			}
 		}
 	}
-	for (let k = 0; k < thorn.length; k++) {
-		let thorns = thorn[k];
-		if (snake.head.x == thorns.position.x && snake.head.y == thorns.position.y) {
-			isCollide = true;
+	if (snake.level == 1 || snake.level == 3) {
+		for (let k = 0; k < thorn.length; k++) {
+			let thorns = thorn[k];
+			if (snake.head.x == thorns.position.x && snake.head.y == thorns.position.y) {
+				isCollide = true;
+			}
 		}
 	}
 	if (isCollide) {
@@ -570,7 +577,9 @@ document.addEventListener("keydown", function (event) {
 })
 
 function initThorn() {
-	moveThorn(thorn);
+	if (snake.level == 1 || snake.level == 3) {
+		moveThorn(thorn);
+	}
 }
 
 function initGame() {
